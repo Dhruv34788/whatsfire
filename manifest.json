@@ -1,0 +1,25 @@
+{
+    "name": "whatsfire",
+    "description" : "send automatic messages to whatsapp contacts from firebase",
+    "version": "1.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts" : ["background.js"],
+        "persistent" : true
+    },
+
+    "browser_action": {
+        "default_title":"START"
+    },
+    
+    "web_accessible_resources": [
+        "init.js"
+    ],
+     "permissions":[
+        "http://*/*",
+        "https://*/*",
+        "activeTab",
+        "tabs" 
+    ],
+    "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+}
